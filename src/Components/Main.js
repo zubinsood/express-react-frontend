@@ -7,7 +7,7 @@ import Show from '../Pages/Show';
 function Main(props) {
   const [people, setPeople] = useState(null);
 
-  const URL = 'http://localhost:3001/people/';
+  const URL = 'https://express-react-people-014516ae020b.herokuapp.com/people';
 
   const getPeople = async () => {
     try {
