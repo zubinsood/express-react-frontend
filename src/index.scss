@@ -10,7 +10,7 @@ $contrastcolor: white;
   background-color: $maincolor;
 }
 
-@mixin black-text-white-bg {
+@mixin black-test-white-bg {
   color: $maincolor;
   background-color: $contrastcolor;
 }
@@ -34,8 +34,51 @@ $contrastcolor: white;
   }
 }
 
+// --------------------------
+// Form
+// --------------------------
+
+.person-section,
+div {
+  form {
+    input {
+      @include white-text-black-bg;
+      padding: 10px;
+      font-size: 1.1em;
+      margin: 10px;
+
+      &[type="submit"]:hover {
+        @include black-test-white-bg;
+      }
+    }
+  }
+}
+
+// --------------------------
+// button
+// --------------------------
+
+button#delete {
+  @include white-text-black-bg;
+  display: block;
+  margin: auto;
+  font-size: 1.3em;
+  padding: 10px;
+}
+
+// --------------------------
+// images
+// --------------------------
+
+.avatar-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 90px;
+  object-fit: cover;
+}
+
 @media (min-width: 768px) {
   .nav {
-    justify-content: flex-start;
+    justify-content: flex-start;    
   }
 }
